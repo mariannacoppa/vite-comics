@@ -8,6 +8,6 @@ export default {
         <img src="../assets/img/dc-logo.png" alt="dc-logo">
     </div>
 </template>
-<style>
+<style lang="scss" scoped>
     
 </style>
