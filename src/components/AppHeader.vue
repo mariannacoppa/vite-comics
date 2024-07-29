@@ -5,7 +5,7 @@ export default {
 </script>
 <template>
     <div>
-        <h1>DC comics</h1>
+        <img src="../assets/img/dc-logo.png" alt="dc-logo">
     </div>
 </template>
 <style>
