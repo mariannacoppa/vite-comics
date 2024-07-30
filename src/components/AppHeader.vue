@@ -64,7 +64,7 @@ export default {
             <div class="row">
                 <div class="col-12">
                     <div class="content d-flex justify-content-between">
-                        <div class="logo d-flex">
+                        <div class="logo d-flex py-2">
                             <img src="../assets/img/dc-logo.png" alt="dc-logo">
                         </div>
                         <div class="nav-menu">
@@ -90,9 +90,10 @@ export default {
     </div>
 </template>
 <style lang="scss" scoped>
+@use '../styles/partials/variables';
     ul {
         li {
-            padding: 20px 30px;
+            padding: 20px;
             a {
                 text-decoration: none;
                 color: black;
@@ -104,10 +105,10 @@ export default {
         }
     }
     .active {
-        border-bottom: 5px solid #0c7cec;
+        border-bottom: 5px solid variables.$primary_color;
     }
     .logo, .nav-menu {
-        height: 200px;
+        height: 70px;
     }
     img {
         height: 50px;
