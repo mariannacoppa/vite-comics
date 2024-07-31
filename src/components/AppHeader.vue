@@ -59,12 +59,12 @@ export default {
 }
 </script>
 <template>
-    <div>
+    <header>
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="content d-flex justify-content-between">
-                        <div class="logo d-flex py-2">
+                    <div class="content d-flex align-items-center justify-content-between">
+                        <div class="logo mb-3">
                             <img src="../assets/img/dc-logo.png" alt="dc-logo">
                         </div>
                         <div class="nav-menu">
@@ -87,13 +87,18 @@ export default {
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 </template>
 <style lang="scss" scoped>
 @use '../styles/partials/variables';
+header {
+    height: 50px;
+    img {
+        height: 40px;
+    }
     ul {
         li {
-            padding: 20px;
+            padding: 10px;
             a {
                 text-decoration: none;
                 text-transform: uppercase;
@@ -109,10 +114,5 @@ export default {
     .active {
         border-bottom: 5px solid variables.$primary_color;
     }
-    .logo, .nav-menu {
-        height: 70px;
-    }
-    img {
-        height: 50px;
-    }
+}
 </style>
