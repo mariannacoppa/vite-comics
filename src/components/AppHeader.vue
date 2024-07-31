@@ -96,7 +96,9 @@ export default {
             padding: 20px;
             a {
                 text-decoration: none;
+                text-transform: uppercase;
                 color: black;
+                font-size: 10px;
                 transition: font-weight 0.3s;
                 &:hover {
                     font-weight: 800;
