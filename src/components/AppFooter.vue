@@ -1,6 +1,117 @@
 <script>
 export default {
-    
+    data () {
+        return {
+            dcComics: [
+                {
+                    label: 'characters',
+                    url: '#',
+                },
+                {
+                    label: 'comics',
+                    url: '#',
+                },
+                {
+                    label: 'movies',
+                    url: '#',
+                },
+                {
+                    label: 'tv',
+                    url: '#',
+                },
+                {
+                    label: 'games',
+                    url: '#',
+                },
+                {
+                    label: 'videos',
+                    url: '#',
+                },
+                {
+                    label: 'news',
+                    url: '#',
+                }
+            ],
+            shops: [
+                {
+                    label: 'Shop DC',
+                    url: '#'
+                },
+                {
+                    label: 'Shop DC Collectibles',
+                    url: '#'
+                }
+            ],
+            dCs: [
+                {
+                    label: 'Terms of Use',
+                    url: '#'
+                },
+                {
+                    label: 'Privacy Policy (New)',
+                    url: '#'
+                },
+                {
+                    label: 'Ad Chioces',
+                    url: '#'
+                },
+                {
+                    label: 'Advertising',
+                    url: '#'
+                },
+                {
+                    label: 'Jobs',
+                    url: '#'
+                },
+                {
+                    label: 'Subscriptions',
+                    url: '#'
+                },
+                {
+                    label: 'Talent Workshops',
+                    url: '#'
+                },
+                {
+                    label: 'CPSC Certificates',
+                    url: '#'
+                },
+                {
+                    label: 'Ratings',
+                    url: '#'
+                },
+                {
+                    label: 'Shop Help',
+                    url: '#'
+                },
+                {
+                    label: 'Contact Us',
+                    url: '#'
+                }
+            ],
+            sites: [
+                {
+                    label: 'DC',
+                    url: '#'
+                },
+                {
+                    label: 'MAD Magazine',
+                    url: '#'
+                },
+                {
+                    label: 'DC Kids',
+                    url: '#'
+                },
+                {
+                    label: 'DC Universe',
+                    url: '#'
+                },
+                {
+                    label: 'DC Power Visa',
+                    url: '#'
+                }
+            ]
+        }
+    }
 }
 </script>
 <template>
@@ -12,18 +123,15 @@ export default {
                         <div class="content my-4">
                             <h6 class="text-white">DC COMICS</h6>
                             <ul class="list-unstyled">
-                                <li>Characters</li>
-                                <li>Comics</li>
-                                <li>Movies</li>
-                                <li>TV</li>
-                                <li>Games</li>
-                                <li>Videos</li>
-                                <li>News</li>
+                                <li v-for="(dcComic, index) in dcComics" :key="index">
+                                    <a :href="dcComic.url">{{dcComic.label}}</a>
+                                </li>
                             </ul>
                             <h6 class="text-white">SHOP</h6>
                             <ul class="list-unstyled">
-                                <li>Shop DC</li>
-                                <li>Shop DC Collections</li>
+                                <li v-for="(shop, index) in shops" :key="index">
+                                    <a :href="shop.url">{{shop.label}}</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -31,17 +139,9 @@ export default {
                         <div class="content my-4">
                             <h6 class="text-white">DC</h6>
                             <ul class="list-unstyled">
-                                <li>Terms Of Use</li>
-                                <li>Privacy Policy (New)</li>
-                                <li>Ad Choices</li>
-                                <li>Advertising</li>
-                                <li>Jobs</li>
-                                <li>Subscriptions</li>
-                                <li>Talent Workshops</li>
-                                <li>CPSC Certificates</li>
-                                <li>Ratings</li>
-                                <li>Shop Help</li>
-                                <li>Contact Us</li>
+                                <li v-for="(dC, index) in dCs" :key="index">
+                                    <a :href="dC.url">{{dC.label}}</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -49,11 +149,9 @@ export default {
                         <div class="content my-4">
                             <h6 class="text-white">SITES</h6>
                             <ul class="list-unstyled">
-                                <li>DC</li>
-                                <li>MAD Magazine</li>
-                                <li>DC Kids</li>
-                                <li>DC Universe</li>
-                                <li>DC Power Visa</li>
+                                <li v-for="(site, index) in sites" :key="index">
+                                    <a :href="site.url">{{site.label}}</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
