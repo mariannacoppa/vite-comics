@@ -13,27 +13,27 @@ export default {
         return {
             menues: [
                 {
-                    img: '../assets/img/buy-comics-digital-comics.png',
+                    img: '../src/assets/img/buy-comics-digital-comics.png',
                     url: '#',
                     label: 'digital comics'
                 },
                 {
-                    img: '../assets/img/buy-comics-merchandise.png',
+                    img: '../src/assets/img/buy-comics-merchandise.png',
                     url: '#',
                     label: 'dc merchandise'
                 },
                 {
-                    img: '../assets/img/buy-comics-subscriptions.png',
+                    img: '../src/assets/img/buy-comics-subscriptions.png',
                     url: '#',
                     label: 'subscriptions'
                 },
                 {
-                    img: '../assets/img/buy-comics-shop-locator.png',
+                    img: '../src/assets/img/buy-comics-shop-locator.png',
                     url: '#',
                     label: 'comic shop locator'
                 },
                 {
-                    img: '../assets/img/buy-dc-power-visa.svg',
+                    img: '../src/assets/img/buy-dc-power-visa.svg',
                     url: '#',
                     label: 'dc power visa'
                 }
@@ -59,13 +59,13 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="content d-flex justify-content-center flex-wrap">
-                        <CardItem class="card" v-for="(card, index) in cards" :thumb="card.thumb" :series="card.series" />
+                    <div class="content d-flex justify-content-center flex-wrap mt-5">
+                        <CardItem class="card col-3" v-for="(card, index) in cards" :thumb="card.thumb" :series="card.series" />
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="content d-flex justify-content-center">
-                        <div class="btn btn-primary mt-3">load more</div>
+                        <div class="btn btn-primary my-3">load more</div>
                     </div>
                 </div>
             </div>
@@ -77,13 +77,11 @@ export default {
                 <div class="col-12">
                     <div class="content align-content-center">
                         <ul class="list-unstyled d-flex justify-content-between">
-                            <li class="px-2 align-content-center" v-for="(menu, index) in menues" :key="index">
+                            <li class="px-2 mt-2 align-content-center" v-for="(menu, index) in menues" :key="index">
                                 <img :src="menu.img" :alt="menu.label">
                                 <a :href="menu.url">{{menu.label}}</a>
                             </li>
                         </ul>
-                        <!-- <img src="../assets/img/buy-comics-subscriptions.png" alt="">
-                        <img src="../assets/img/buy-dc-power-visa.svg" alt=""> -->
                     </div>
                 </div>
             </div>
@@ -120,6 +118,7 @@ export default {
         }
         img {
             width: 20px;
+            padding-right: 5px;
         }
     }
 </style>
