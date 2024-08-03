@@ -192,6 +192,10 @@ export default {
             
             li {
                 font-size: 10px;
+                a {
+                    text-decoration: none;
+                    color: #999898;
+                }
             }
             .col-md-6 {
                 background-image: url('../assets/img/dc-logo-bg.png');
